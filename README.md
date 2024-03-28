@@ -29,9 +29,35 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
 - DB언어
     - SQL(Structured Query Language) : 구조화된 질의 언어    
     - DDL(Data Definition Language) - 데이터베이스, 테이블, 인덱스 생성
-    - DML(Data Manipulation Language) - 검색, 삽입, 수정, 삭제 등 기능(!)
-    - DCL(Data Control Language) - 권한, 트랜잭션 부여 / 제거 기능
+    - DML(Data Manipulation Language) - 검색(SELECT), 삽입(INSURT), 수정(UPDATE), 삭제(DELETE) 등 기능(가장 중요!)★★★★★
+    - DCL(Data Control Language) - 권한, 트랜잭션 부여(GRANT) / 제거(REVOKE) 기능
 
+- SQL 기본 학습
+    - SSMS 실행
+    - SQL에서는 equal연산자에 == 사용X, 모조건 =
+	- SQL에서는 문자열에 "" 사용X, 무조건 ''
+	- SQL에서는 대소문자 구분X, 하지만 키워드(파란글)는 대문자로 사용할 것
+	- SQL에서는 ;이 필수가 아님. 하지만 중요한 사항에서는 사용할 것
+    - 도구 -> 옵션 -> 파일확장명 -> sql쿼리 인코딩 사용
+    - 컨트롤+n하면 utf-8로 바로 설정가능
+
+- DML 학습
+    - SQL 명령어 키워드 : SELECT, INSURT, UPDATE, DELETE
+    - IT개발 표현 언어 : Request, Create, Update, Delete(CRUD로 부름)
+    - 예시 - CRU개발 뜻은 INSERT, UPDATE, SELECT를 할 수 있는 기능을 개발하라는 의미
+    - SELECT
+        - SELECT 구문이 여러 개일 때 원하는 쿼리만 드래그해서 실행시키면 원하는 값만 나옴
+        - SELECT, FROM은 필수고 밑에 []들은 옵션
+        ```sql
+        SELECT [ALL | DISTINCT] 속성이름(들)
+          FROM 테이블이름(들)
+         [WHERE 검색조건(들)]
+         [GROUP BY 속성이름(들)]
+         [HAVING 검색조건(들)]
+         [ORDER BY 속성이름(들) [ASC | DESC]]
+        ```
+    - SELECT문 학습
+     - 기본, 조건검색 학습 중
 
 ## 2일차
 
