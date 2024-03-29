@@ -1,7 +1,7 @@
 # basic-database-2024
 IoT 개발자 과정 SQL Server 학습 리포지토리
 
-## 1일차
+## 1일차(2024-03-28)
 - MS SQL Server 설치 : https://www.microsoft.com/ko-kr/sql-server/sql-server-downloads (최신버전)
     - DBMS 엔진 (개발자 버전(미디어 다운로드, iso))
         - iso 다운로드 후 설치 추천
@@ -59,7 +59,7 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
     - SELECT문 학습
      - 기본, 조건검색 학습 중
 
-## 2일차
+## 2일차(2024-03-29)
 
 
 ## 3일차
