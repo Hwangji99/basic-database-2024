@@ -49,3 +49,13 @@ SELECT custid, bookid, SUM(saleprice) AS [판매액]
   FROM Orders
  GROUP BY custid;
 */
+
+-- HAVING : WHERE절은 일반 필터링조건
+-- HAVING은 통계, 집합 함수의 필터링조건
+-- 가격이 8,000원 이상인 도서를 구매한 고객에 고객별 주문도서 총수량
+-- 단, 2권 이상 구매한 경우만
+SELECT custid, COUNT(*) AS [구매수]
+  FROM Orders
+ WHERE saleprice >= 8000
+ GROUP BY custid
+ HAVING COUNT(*) >= 2; -- 별명 [구매수] 사용할 수 없음

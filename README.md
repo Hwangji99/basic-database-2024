@@ -41,6 +41,8 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
 
     ![SSMS로그인](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db002.png)
 
+    - 특이사항 : SSMS 쿼리창에서 소스코드 작성시 빨간색 오류 밑줄이 가끔 표현(전부 오류는 아님)
+
     - SQL에서는 equal연산자에 == 사용X, 모조건 =
 	- SQL에서는 문자열에 "" 사용X, 무조건 ''
 	- SQL에서는 대소문자 구분X, 하지만 키워드(파란글)는 대문자로 사용할 것
@@ -95,7 +97,52 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
     - SELECT문
         - 복합조건
         - 집계 함수와 GROUP BY 검색
-            - SUM(총합), AVG(평균), COUNT(개수), MIN(최소값), MAX(최대값)
+            - 집계 함수 -> SUM(총합), AVG(평균), COUNT(개수), MIN(최소값), MAX(최대값)
+            - 집계 함수 외 일반 컬럼은 GROUP BY절에 속한 컬럼만 SELECT문에 사용가능
+            - GROUP BY절
+            ```sql
+            SELECT SUM(saleprice) AS [판매액]
+              FROM Orders
+             GROUP BY custid;
+            ```
+
+            - HAVING은 집계함수의 필터로 GROUP BY 뒤에 작성 WHERE절과 필터링이 다름
+            - HAVING절
+            ```sql
+            SELECT custid, COUNT(*) AS [구매수]
+              FROM Orders
+             WHERE saleprice >= 8000
+             GROUP BY custid
+             HAVING COUNT(*) >= 2; -- 별명 [구매수] 사용할 수 없음
+            ```
+        - 2개 이상의 테이블 질의(Query)
+            - 관계형 DB에서 가장 중요한 기법 중 하나(JOIN)
+              (https://sql-joins.leopard.in.ua/)
+            ```sql
+            SELECT *
+              FROM Customer, Orders
+             WHERE Customer.custid = Orders.custid
+             ORDER BY Customer.custid ASC;
+            ```
+            - 각 테이블의 별명으로 줄여서 쓰는게 일반적
+            - 내부조인(INNER JOIN)(교집합)
+            ```sql
+            SELECT c.[address]
+	             , c.custid
+	             , o.custid
+	             , c.[name]
+	             , c.phone 
+                 , o.bookid
+                 , o.orderdate
+                 , o.orderid
+                 , o.saleprice
+              FROM Customer AS c, Orders AS o
+             WHERE c.custid = o.custid
+             ORDER BY c.custid ASC;
+            ```
+            - 외부조인(LEFT | RIGHT JOIN) : 어느 테이블이 기준인지에 따라서 결과가 상이함
+
+        ![외부조인](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db006.png)
 
 ## 3일차
 
