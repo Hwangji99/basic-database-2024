@@ -230,13 +230,57 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
                 - 상위 부속질의의 튜플을 이용하여 하위 부속질의를 계산함
                 - 상위 부속질의와 하위 부속질의가 독립적이지 않고 서로 관련을 맺고 있음
 
-            - 집합연산
-                - 합집합
-                - 차집합
-                - 교집합
+            - 집합연산 : JOIN도 집합이지만, 속성별로 가로로 병합하기 때문에 집합이라 부르지 않음. 집합은 데이터를 세로로 합치는 것을 뜻함
+                - 차집합(EXCEPT, 거의 사용안함) : 하나의 테이블에서 교집합 값을 뺀 나머지
+                - 합집합(UNION, 진짜 많이 사용) : UNION(중복제거), UNION ALL(중복허용)
+                - 교집합(INTERSECT, 거의 사용안함) : 두 테이블에 모두 존재하는 값
+                - EXISTS : 데이터 자체의 존재여부 
+
+- DDL 학습 (SSMS에서 마우스로 조작이 편리)
+    - CREATE : 개체(데이터베이스, 뷰, 테이블, 사용자 등)를 생성하는 구문
+        ```sql
+        -- 테이블 생성에 한정
+        CREATE TABLE 테이블명
+        ({ 속성이름 데이터타입
+            [NOT NULL]
+            [UNIQUE]
+            [DEFAULT 기본값]
+            [CHECK 체크조건]
+        }
+            [PRIMARY KEY 속성이름(들)]
+            {[FORIEGN KEY 속성이름 REFERENCES 테이블이름(속성이름)]
+                [ON UPDATE [NO ACTION | CASCADE | SET NULL | SET DEFAULT]]
+            }
+        )
+        ```
+    - ALTER : 개체를 변경(수정)하는 구문
+        ```sql
+        ALTER TABLE 테이블명
+            [ADD 속성이름 데이터 타입]
+            [DROP COLMN 속성이름]
+            [ALTER COLUMN 속성이름 데이터 타입]
+            [ALTER COLUMN 속성이름 [NULL | NOT NULL]]
+            [ADD PRIMARY KEY(속성이름)]
+            [[ADD | DROP] 제약조건이름];
+        ```
+    - DROP : 개체를 삭제하는 구문
+        ```sql
+        DROP TABLE 테이블명;
+        ```
+
+        - 외래키로 사용되는 기본키가 있으면 외래키를 사용하는 테이블을 삭제 후, 기본키의 테이블을 삭제해야 함!!
 
 ## 4일차(2024-04-02)
+- DML 학습(SELECT 외)
+    - INSERT
+    - UPDATE
+    - DELETE
 
+- SQL 고급
+    - 내장함수
+    - 서브쿼리 리뷰
+    - 뷰
+    - 인덱스
 
 ## 5일차(2024-04-03)
 
