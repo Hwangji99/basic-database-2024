@@ -36,6 +36,19 @@ SELECT '|' + LTRIM('     HELLO     ') + '|'
      , '|' + RTRIM('     HELLO     ') + '|'
      , '|' + TRIM('     HELLO     ') + '|'
 
+-- LEFT(), RIGHT(), SUBSTRING()
+SELECT LEFT('HELLO WORLD!', 5)
+     , RIGHT('HELLO WORLD!', 6)
+     , SUBSTRING('HELLO WORLD!', 7, 5);
+
+-- CHARINDEX() 문자 찾기
+SELECT CHARINDEX('sql', 'Microsoft SQL Server 2022');
+
+-- SUBSTRING() 연계
+SELECT SUBSTRING('Microsoft SQL Server 2022',
+            CHARINDEX('sql', 'Microsoft SQL Server 2022'),
+            LEN('sql'));
+
 -- SUBSTRING, DB는 인덱슥 1부터 시작(!!!)
 SELECT SUBSTRING([name], 1, 1) AS '성씨'
      , COUNT(*) AS '성씨별 인원수'
@@ -60,4 +73,11 @@ SELECT orderid
      , orderdate AS '주문일자'
      , DATEADD(dd, 10, orderdate) AS '확정일자' -- 10일 뒤로 날짜를 더함
      , DATEADD(mm, 1, orderdate) AS '통계일자' -- 한달 뒤로 날짜를 더함 
+  FROM Orders 
+ 
+-- TOP n 내장된 키워드(함수x)
+SELECT TOP 3 orderid
+     , custid
+     , saleprice
   FROM Orders
+ ORDER BY saleprice DESC;
