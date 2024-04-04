@@ -414,9 +414,11 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
     - 동영상을 깃허브 리드미에서 드래그해서 옮길 수 있음
     - 실행화면
 
-	https://github.com/Hwangji99/basic-database-2024/assets/158007430/62cc48eb-4a7d-406f-afca-7497bf96293b
+
+	https://github.com/Hwangji99/basic-database-2024/assets/158007430/8769ac28-47e3-4394-8f91-98912cc05afe
 
 
+	
 ## 7일차(2024-04-05)
 - SQL 고급
     - 트랜잭션
