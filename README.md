@@ -410,9 +410,11 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
             - Python에서 pymssql로 접속할 때, Charset을 'UTF8'로 설정
             - INSERT 쿼리에 한글 입력되는 컬럼은 N''을 붙여줌(유니코드로 입력하라는 뜻)
 
-    - 실행화면은 픽픽을 사용하여 MP4나 GIF로 만들 수 있다.(저화질로 설정)
+    - 실행화면은 픽픽을 사용하여 MP4나 GIF로 만들 수 있음(저화질로 설정)
+    - 동영상을 깃허브 리드미에서 드래그해서 옮길 수 있음
     - 실행화면
 
+	https://github.com/Hwangji99/basic-database-2024/assets/158007430/62cc48eb-4a7d-406f-afca-7497bf96293b
 
 
 ## 7일차(2024-04-05)
