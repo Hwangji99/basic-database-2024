@@ -399,10 +399,13 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
 
         ![구성관리자](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db007.png)
 
-
-- 데이터베이스 모델링
-
 ## 6일차(2024-04-04)
+- 파이썬 SQL Server 연동 프로그래밍
+    - Madang DB 관리 프로그램
+        - PyQt5 + pymssql
+
+        
+- 데이터베이스 모델링
 
 
 ## 7일차(2024-04-05)
