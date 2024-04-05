@@ -441,9 +441,6 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
 
 - 데이터 모델링
     - 설계 순서 : 개념 설계 -> 논리 설계 -> 물리 설계
-
-    ![개념적 모델링](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db009.png)
-
     - 개념적 모델링
         - 요구사할을 수집하고 분석한 결과를 토대로 업무의 핵심적인 개념을 구분하고 전체적인 뼈대를 만드는 과정
         - 개체(Entity)를 추출하고 각 개체들 간의 관계를 정의하여 ER 다이어그램(ERD, Entity Relationship Diagram)을 만드는 과정까지를 말함
@@ -462,6 +459,25 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
         - DBMS의 특성에 맞게 저장 구조를 정의해야 데이터베이스가 최적의 성능을 낼 수 있음
         - 정리: DB에 맞춰서 컬럼이름, 컬럼데이터 타입 및 크기 지정, DB에 대한 검토로 테이블을 만들기 직전의 설계를 완성
 
-    ER 모델링 : ERD를 그리기 위한 기본 이론
+    - ER 모델링 : ERD를 그리기 위한 기본 이론
+
+        ![속성의 유형](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db009.png)
+
+
+        - 차수에 따른 관계 타입의 유형
+
+        ![관계 대응 수에 따른 관계 타입의 유형](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db010.png)
+
+
+        - IE 표기법
+
+        ![IE 표기법 예시](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db011.png)
+
+
+        ![IE 표기법-관계와 관계 대응 수](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db012.png)
+        
+
+
+
 
 ## 8일차
