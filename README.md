@@ -474,6 +474,7 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
         ![IE 표기법 예시](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db011.png)
 
 
+
         ![IE 표기법-관계와 관계 대응 수](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db012.png)
         
 
