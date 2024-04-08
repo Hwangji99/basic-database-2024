@@ -486,11 +486,7 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
 
         <!--md 주석. ![인덱스](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db013.png) -->
         <!-- html img 태그가 이미지 사이즈 조정 -->
-        <img src="https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db013.png" width = "900>
-
-
-
-
+        <img src="https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db013.png" width = "900">
 
 
 ## 8일차(2024-04-08)
