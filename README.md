@@ -516,5 +516,27 @@ IoT 개발자 과정 SQL Server 학습 리포지토리
                 - 일반 : 기본 데이터베이스 hr선택
                 - 사용자매핑 : hr 선택, 데이터베이스 역할 멤버 : db_owner, public 선택
 
-    2. HR사용자 로그인(VS Code)
+    2. HR사용자 로그인(VS Code) - hr_user
+        - SELECT
+        - WHERE, ORDER BY
+        - FUNCTION
+        - AGGREGATE FUNC
+        - JOIN
+        - SET ...
+
+## 9일차(2024-04-09)
+- 실무실습
+    - 쿼리실습
+        - 기본 SELECT, WHERE, ORDER BY
+        - 집계함수 GROUP BY, ROLLUP
+        - JOIN, SUBQUERY, UNION ...
+        - CASE WHEN THEN END ...
+        - 내장함수 ...
     
+![HR_ERD](https://github.com/Hwangji99/basic-database-2024/blob/main/images/images/db014.png)
+
+- 공부를 더 할 부분
+    - 트랜잭션 
+    - DB 보안 백업과 복원
+    - 모델링 + 정규화
+    - 데이터모델링 실습 p.588
